@@ -1,0 +1,6 @@
+FROM ubuntu:latest
+RUN apt-get update
+RUN apt-get install default-jdk && maven && git -y
+WORKDIR /home/ubuntu/homework/boxfuse
+RUN git clone clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
+RUN mvn package ./boxfuse-sample-java-war-hello/pom.xml
