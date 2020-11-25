@@ -3,13 +3,17 @@ version: '3.8'
 services: 
 
   maven:
-       build: ./maven
+       build:
+           context: ./maven
+           dockerfile: dockerfile-maven
        container_name: maven_container
        volumes: 
         - ./tomcat:/home/ubuntu/homework/boxfuse/1boxfuse-sample-java-war-hello/pom.xml
          
   tomcat:
-       build: ./tomcat
+       build: 
+           context: ./tomcat
+           dockerfile: dockerfile-tomcat
        container_name: tomcat_container
        links: 
         - maven
