@@ -5,4 +5,5 @@ RUN apt-get install maven -y
 RUN apt-get install git -y
 WORKDIR /home/ubuntu/homework/boxfuse
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
-RUN mvn package /home/ubuntu/homework/boxfuse/boxfuse-sample-java-war-hello/pom.xml
+WORKDIR /home/ubuntu/homework/boxfuse/boxfuse-sample-java-war-hello
+RUN mvn package
