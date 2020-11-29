@@ -1,5 +1,3 @@
 FROM davidcaste/alpine-tomcat:tomcat8
 WORKDIR /usr/local/tomcat/webapps/
 EXPOSE 8080
-RUN chmod +x ./catalina.sh
-CMD ["./catalina.sh", "run"]
