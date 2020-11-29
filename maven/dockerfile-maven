@@ -7,4 +7,3 @@ WORKDIR /home/ubuntu/homework/boxfuse
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 WORKDIR /home/ubuntu/homework/boxfuse/boxfuse-sample-java-war-hello
 RUN mvn package
-RUN cp ./target/*.war /tmp
