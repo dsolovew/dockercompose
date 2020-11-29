@@ -8,7 +8,7 @@ services:
            dockerfile: dockerfile-maven
        container_name: maven_container
        volumes: 
-        - war:/home/ubuntu/homework/boxfuse/boxfuse-sample-java-war-hello/target/
+        - ./war:/home/ubuntu/homework/boxfuse/boxfuse-sample-java-war-hello/target/
          
   tomcat:
        build: 
@@ -16,7 +16,7 @@ services:
            dockerfile: dockerfile-tomcat
        container_name: tomcat_container
        volumes: 
-        - war:/home/ubuntu/homework/boxfuse/boxfuse-sample-java-war-hello/target/
+        - ./war:/usr/local/tomcat/webapps/
        links: 
         - maven
        ports: 
